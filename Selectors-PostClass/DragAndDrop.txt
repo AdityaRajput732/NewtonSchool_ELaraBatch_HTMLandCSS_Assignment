@@ -1,0 +1,365 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/aja</div>s/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="header">Menu Card</h1>
+      <div class="row">
+        <div class="col-md-3">
+          <h3>About</h3>
+          <img src="https://www.pngall.com/wp-content/uploads/5/Serving-Food-PNG-Image-HD.png" width="250px" height="200px" alt="Girl in a jacket" width="500" height="600" />
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsa eveniet esse ab voluptas, earum sapiente veritatis expedita, praesentium doloribus sed eius maxime. Quisquam eveniet exercitationem vel nulla ipsa voluptatum.</p>
+        </div>
+        <div class="col-md-9">
+          <div class="section">
+            <h4 class="subtitle">Starters</h4>
+            <div class="content" id="list1">
+              <div class="menuitem">
+                <div class="name">Lorem ipsum dolor</div>
+                <div class="cost">Rs.234</div>
+              </div>
+              <div class="menuitem">
+                <div class="name">dolor sit amet</div>
+                <div class="cost">Rs.500</div>
+              </div>
+              <div class="menuitem">
+                <div class="name">dolor voluptate</div>
+                <div class="cost">Rs.2345</div>
+              </div>
+              <div class="menuitem">
+                <div class="name">Consectetur adipisicing elit</div>
+                <div class="cost">Rs.1200</div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <h4 class="subtitle">Veg</h4>
+            <div class="content" id="list2">
+              <div class="menuitem">
+                <div class="name">Lorem ipsum dolor</div>
+                <div class="cost">Rs.234</div>
+              </div>
+              <div class="menuitem">
+                <div class="name">dolor sit amet</div>
+                <div class="cost">Rs.500</div>
+              </div>
+              <div class="menuitem">
+                <div class="name">dolor voluptate</div>
+                <div class="cost">Rs.2345</div>
+              </div>
+              <div class="menuitem">
+                <div class="name">Consectetur adipisicing elit</div>
+                <div class="cost">Rs.1200</div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <h4 class="subtitle">Non-Veg</h4>
+            <div class="content" id="list3">
+              <div class="menuitem">
+                <div class="name">Lorem ipsum dolor</div>
+                <div class="cost">Rs.234</div>
+              </div>
+              <div class="menuitem">
+                <div class="name">dolor sit amet</div>
+                <div class="cost">Rs.500</div>
+              </div>
+              <div class="menuitem">
+                <div class="name">dolor voluptate</div>
+                <div class="cost">Rs.2345</div>
+              </div>
+              <div class="menuitem">
+                <div class="name">Consectetur adipisicing elit</div>
+                <div class="cost">Rs.1200</div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <h4 class="subtitle">Deserts</h4>
+            <div class="content" id="list4">
+              <div class="menuitem">
+                <div class="name">Lorem ipsum dolor</div>
+                <div class="cost">Rs.234</div>
+              </div>
+              <div class="menuitem">
+                <div class="name">dolor sit amet</div>
+                <div class="cost">Rs.500</div>
+              </div>
+              <div class="menuitem">
+                <div class="name">dolor voluptate</div>
+                <div class="cost">Rs.2345</div>
+              </div>
+              <div class="menuitem">
+                <div class="name">Consectetur adipisicing elit</div>
+                <div class="cost">Rs.1200</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
+CSS
+body {
+  background-color: #ffb459 !important;
+  background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  height: 100vh;
+}
+.header {
+  font-size: 4rem;
+  text-align: center;
+}
+.name {
+  width: 70%;
+  font-size: 20px;
+}
+.cost {
+  width: 15%;
+  font-size: 20px;
+}
+.action {
+  border-radius: 50% !important;
+  margin-left: 10px;
+}
+.menuitem {
+  display: flex;
+  margin-bottom: 10px;
+  cursor: move;
+  user-select: none;
+}
+.draggable {
+  cursor: move;
+  user-select: none;
+}
+JS 
+// The current dragging item
+
+let draggingEle;
+
+// The current position of mouse relative to the dragging element
+
+let x = 0;
+
+let y = 0;
+
+let placeholder;
+
+let isDraggingStarted = false;
+
+const mouseDownHandler = function (e) {
+
+draggingEle = e.target.parentNode;
+
+// Calculate the mouse position
+
+const rect = draggingEle.getBoundingClientRect();
+
+x = e.pageX - rect.left;
+
+y = e.pageY - rect.top;
+
+// Attach the listeners to `document`
+
+document.addEventListener('mousemove', mouseMoveHandler);
+
+document.addEventListener('mouseup', mouseUpHandler);
+
+};
+
+const mouseMoveHandler = function (e) {
+
+const draggingRect = draggingEle.getBoundingClientRect();
+
+if (!isDraggingStarted) {
+
+// Update the flag
+
+isDraggingStarted = true;
+
+// Let the placeholder take the height of dragging element
+
+// So the next element won't move up
+
+placeholder = document.createElement('div');
+
+placeholder.classList.add('placeholder');
+
+draggingEle.parentNode.insertBefore(placeholder, draggingEle.nextSibling);
+
+// Set the placeholder's height
+
+placeholder.style.height = `${draggingRect.height}px`;
+
+}
+
+// Set position for dragging element
+
+draggingEle.style.position = 'absolute';
+
+draggingEle.style.top = `${e.pageY - y}px`;
+
+draggingEle.style.left = `${e.pageX - x}px`;
+
+const prevEle = draggingEle.previousElementSibling;
+
+const nextEle = placeholder.nextElementSibling;
+
+// User moves item to the top
+
+if (prevEle && isAbove(draggingEle, prevEle)) {
+
+// The current order -> The new order
+
+// prevEle -> placeholder
+
+// draggingEle -> draggingEle
+
+// placeholder -> prevEle
+
+swap(placeholder, draggingEle);
+
+swap(placeholder, prevEle);
+
+return;
+
+}
+
+// User moves the dragging element to the bottom
+
+if (nextEle && isAbove(nextEle, draggingEle)) {
+
+// The current order -> The new order
+
+// draggingEle -> nextEle
+
+// placeholder -> placeholder
+
+// nextEle -> draggingEle
+
+swap(nextEle, placeholder);
+
+swap(nextEle, draggingEle);
+
+}
+
+};
+
+const swap = function (nodeA, nodeB) {
+
+const parentA = nodeA.parentNode;
+
+const siblingA = nodeA.nextSibling === nodeB ? nodeA : nodeA.nextSibling;
+
+// Move `nodeA` to before the `nodeB`
+
+nodeB.parentNode.insertBefore(nodeA, nodeB);
+
+// Move `nodeB` to before the sibling of `nodeA`
+
+parentA.insertBefore(nodeB, siblingA);
+
+};
+
+const isAbove = function (nodeA, nodeB) {
+
+// Get the bounding rectangle of nodes
+
+const rectA = nodeA.getBoundingClientRect();
+
+const rectB = nodeB.getBoundingClientRect();
+
+return rectA.top + rectA.height / 2 < rectB.top + rectB.height / 2;
+
+};
+
+const mouseUpHandler = function () {
+
+// Remove the placeholder
+
+placeholder && placeholder.parentNode.removeChild(placeholder);
+
+// Reset the flag
+
+isDraggingStarted = false;
+
+// Remove the position styles
+
+draggingEle.style.removeProperty('top');
+
+draggingEle.style.removeProperty('left');
+
+draggingEle.style.removeProperty('position');
+
+x = null;
+
+y = null;
+
+draggingEle = null;
+
+// Remove the handlers of `mousemove` and `mouseup`
+
+document.removeEventListener('mousemove', mouseMoveHandler);
+
+document.removeEventListener('mouseup', mouseUpHandler);
+
+};
+
+// Query the list element
+
+const list1 = document.getElementById('list1');
+
+// Query all items
+
+[].slice.call(list1.querySelectorAll('.menuitem')).forEach(function (item) {
+
+item.addEventListener('mousedown', mouseDownHandler);
+
+});
+
+// Query the list element
+
+const list2 = document.getElementById('list2');
+
+// Query all items
+
+[].slice.call(list2.querySelectorAll('.menuitem')).forEach(function (item) {
+
+item.addEventListener('mousedown', mouseDownHandler);
+
+});
+
+// Query the list element
+
+const list3 = document.getElementById('list3');
+
+// Query all items
+
+[].slice.call(list3.querySelectorAll('.menuitem')).forEach(function (item) {
+
+item.addEventListener('mousedown', mouseDownHandler);
+
+});
+
+// Query the list element
+
+const list4 = document.getElementById('list4');
+
+// Query all items
+
+[].slice.call(list4.querySelectorAll('.menuitem')).forEach(function (item) {
+
+item.addEventListener('mousedown', mouseDownHandler);
+
+});

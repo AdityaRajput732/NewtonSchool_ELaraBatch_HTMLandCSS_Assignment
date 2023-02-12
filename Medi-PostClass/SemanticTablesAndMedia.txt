@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+      <table border="1">
+            <thead>
+            <th>Roll numbers</th>
+            <th>Names</th>
+        </thead>
+        <tbody>
+           <tr>
+                <td>1</td>
+            <td>Aditya Raj</td>
+           </tr>
+           <tr>
+                <td>2</td>
+            <td>Aman Raj</td>
+           </tr>
+           <tr>
+                <td>3</td>
+            <td>Anand Raj</td>
+           </tr>
+        </tbody>
+      </table>
+      <h1>List of medias</h1>
+      <ol>
+          <li>
+              <img src="https://picsum.photos/id/123/200/300" alt="loading img">
+          </li>
+          <li><video controls>
+                 <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+             </video>
+             </li>
+             <li>
+               <audio src="http://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg" type="audio/ogg" controls>
+        </audio>
+             </li>
+      </ol>
+    </body>
+</html>

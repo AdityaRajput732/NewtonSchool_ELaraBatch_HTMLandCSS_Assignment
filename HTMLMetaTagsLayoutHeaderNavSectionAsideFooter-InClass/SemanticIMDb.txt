@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <header>KGF 2</header>
+        <nav>
+            <a id="nav-actor" href="#actor">actor</a>
+            <a id="nav-quote" href="#quote">quote</a>
+        </nav>
+        <summary>The blood-soaked land of KGF has a new overload now, Rockey,whose name strikes fear in the heart of his foes.</summary>
+        <section id="actor">Yash</section>
+        <section id="quote">Khoon se likhi hui kahani hai ye, siyahi se nahi badalegi.. agar aage badhna hai toh fir se khoon hi mangegi.</section>
+        <aside>rating=8.4</aside>
+        <footer>
+            Produced by: Aditya Raj
+        </footer>
+    </body>
+</html>

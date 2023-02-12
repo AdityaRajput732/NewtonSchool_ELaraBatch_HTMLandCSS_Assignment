@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <form method="post">
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" placeholder="Enter your Name" required ><br>
+
+            <label for="email">Email</label>
+            <input  id="email" type="email" name="email" placeholder="Enter your Email" required><br>
+
+            
+
+            <label for="gender">Gender</label>
+            
+            <input name="gender" type="radio" value="Male" id="gender"  required >
+            <label for="gender">Male</label>
+             
+            <input name="gender" type="radio" value="Female" id="gender" required>
+            <label for="gender">Female</label>
+             
+            
+
+        <label for="laptop">Laptop Brands</label>
+            <select id="laptop"  >
+                <option id="laptop" value="Apple">Apple</option>
+                <option id="laptop" value="Asus">Asus</option>
+                <option id="laptop" value="HP">HP</option>
+            </select><br>
+            
+            <label for="age">Age<label>
+            <input id="age" type="number" max="100" placeholder="Enter your age" required><br>
+
+            <label for="dob">DOB</label>
+            <input type="date" id="dob" required><br>
+
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Enter your password" required><br>
+
+            <label for="portfolio">Portfolio</label>
+            <input type="url" id="portfolio" name="portfolio" placeholder="Enter your portfolio link" required>
+ 
+            <button type="submit" value="Submit">Submit</button>
+        </form>
+            
+            
+    </body>
+</html>

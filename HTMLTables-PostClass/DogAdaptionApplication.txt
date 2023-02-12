@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <form>
+            <input id="name" placeholder="Name" type="text">
+            <input id="phone" placeholder="Phone Number" type="text">
+            <input id="address" placeholder="Address" type="text">
+            <p> <input type="checkbox" id="checkbox" value="Have you ever lived with a Dog before?">Have you ever lived with a Dog before?</p>
+        <p> Please select your preferred breeds</p>
+        <select id="multiSelect">
+            <option>Samoyed</option>
+                <option>Hovawart</option>
+                    <option>Chinook</option>
+                        </select>
+                        <input type="submit" value="Submit" id="submit">
+        </form>
+    </body>
+</html>

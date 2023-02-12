@@ -1,0 +1,28 @@
+HTML 
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <section>
+            <img class="moviePic" src="https://cdn.shopify.com/s/files/1/0472/4601/6670/files/characters_harry_large.jpg?v=1652397518" alt="image loading">
+            <p class="movieDetail">
+                An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.
+            </p>
+        </section>
+    </body>
+</html>
+
+CSS 
+.moviePic{
+  height: 100px;
+  width: 120px;  
+  opacity: 80%;
+}
+.movieDetail{
+  position:20% ;
+  top: 10px;
+  width: 200px;
+  text-align:center ;
+  font-size: 10px;
+
+}

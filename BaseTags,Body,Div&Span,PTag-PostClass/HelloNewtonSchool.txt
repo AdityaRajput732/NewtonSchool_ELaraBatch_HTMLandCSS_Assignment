@@ -1,0 +1,23 @@
+html
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <main class="newton" id="school">
+<p class="hello-newton">Hello Newton School</p>
+</main>
+    </body>
+</html>
+
+CSS 
+
+.newton{
+    height: 150px;
+    width: 150px;
+    background-color: black;
+}
+.hello-newton{
+color:white;
+margin-left: 32px;
+padding: 10px;
+}

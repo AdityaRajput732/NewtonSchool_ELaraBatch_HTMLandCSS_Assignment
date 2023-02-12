@@ -1,0 +1,17 @@
+<img src="https://photos.app.goo.gl/VSsp8L3DszBKSgq96" alt="image downloading">
+<h1>Aditya Raj</h1>
+<a href="https://www.linkedin.com/in/aditya-raj-aa2588243">linkedin</a>
+<section id="skills">
+<ol>
+    <li>Java</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Javascript<li
+</ol>
+</section>
+<section id="projects">
+    <ul>
+        <li>make aform</li>
+        <li>making portofolio</li>
+    </ul>
+</section>

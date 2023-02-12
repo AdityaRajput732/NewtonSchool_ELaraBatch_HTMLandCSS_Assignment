@@ -1,0 +1,10 @@
+<ol>
+    <li data-ns-test="shoppingList">iphone 13 pro</li>
+    <li data-ns-test="shoppingList">bmw car</li>
+    <li data-ns-test="shoppingList">villa</li>
+</ol>
+<ul>
+    <li data-ns-test="holidayList">vaishno devi</li>
+    <li data-ns-test="holidayList">dubai</li>
+    <li data-ns-test="holidayList">kashmir</li>
+</ul>

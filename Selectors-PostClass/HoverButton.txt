@@ -1,0 +1,26 @@
+HTML 
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+     <div>
+         <button type="submit" id="btn">Submit</button>
+     </div>
+
+    </body>
+</html>
+CSS
+#btn {
+    background: black;
+    color: white;
+   border: none;
+    border-radius: 5px;
+    
+}
+#btn:hover {
+    background: yellow;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    
+}
